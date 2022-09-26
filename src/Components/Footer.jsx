@@ -12,17 +12,19 @@ const Container = styled.footer`
     display: flex;
 `
 const Imagens = styled.div`
-    margin-left: 5vh;
+    margin-left: 8vh;
     margin-top: 5%;
     width: 80%;
     flex-wrap: wrap;
 `
 const Image = styled.img`
     width: 6vh;
-    height: 6vh;
+    height: 6vh; 
+    margin-right: 2vh;
 `
 const Escrito = styled.div`
-    display: inline;
+    flex-direction: column;
+    width: 30vh;
     margin-top: 5%;
 `
 
