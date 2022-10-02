@@ -1,7 +1,9 @@
 import React from "react"
 import logoimg from "./Imagens/logoimg.png"
 import img1 from "./Imagens/img1.png"
+import menu from "./Imagens/menu.png"
 import styled from "styled-components"
+
 
 const Box = styled.header`
     background-image: url(${img1});
@@ -14,6 +16,7 @@ const Box = styled.header`
     align-items: center;
     width: 100%;
     height: 1300px;
+    border: solid 25px #ffffff;
 
 
     h1{
@@ -25,6 +28,32 @@ const Box = styled.header`
         text-transform: uppercase;
         letter-spacing: 20px;
     }
+
+    @media (max-width: 890px){
+        
+        h1{
+            font-size: 6em;
+            bottom: 150px;
+        }
+    }
+    
+    @media (max-width: 615px){
+        
+        background-position: center right;
+
+        
+        h1{
+            font-size: 4em;
+            bottom: 350px;
+        }
+    }
+
+    @media (max-width: 500px){
+
+        h1{
+            font-size: 2.5em;
+        }
+    }
 `
 
 const Menu = styled.nav`
@@ -33,7 +62,6 @@ const Menu = styled.nav`
     width: 100%;
     padding: 35px;
     
-
     ul{
         display: flex;
         width: 40%;
@@ -60,6 +88,50 @@ const Menu = styled.nav`
     figure{
         margin-top: 10px;
     }
+
+
+    @media (max-width: 1300px){
+
+        ul{
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 890px){
+
+        ul{
+            width: 70%;
+        }
+
+        li{
+            font-size: 0.9rem;
+            margin: 0 15px;
+            padding: 10px 15px;
+        }
+    }
+
+    @media (max-width: 615px){
+        
+       ul{
+            display: none;
+        }
+
+    }
+`
+
+const Iconemenu = styled.figure`
+    display:none;
+    
+    @media (max-width: 615px){
+        display:flex;
+        width: 15%;
+
+        img{
+            width: 50px;
+        }
+    }
+
+
 `
 
 export default function Header(){
@@ -80,6 +152,9 @@ export default function Header(){
                     Subscribe
                 </li>
             </ul>
+            <Iconemenu >
+                <img src={menu} alt="menu" />
+            </Iconemenu>
         </Menu>
         <h1>Recipes</h1>
       </Box> 
