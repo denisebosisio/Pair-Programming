@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Redvelvet from "../Cards/Redvelvet"
 import Pizza from "../Cards/Pizza"
 import Peanut from "../Cards/Peanut"
+import About from "../Cards/About"
 
 const Section = styled.div`
     
@@ -39,6 +40,7 @@ const Div = styled.div`
         justify-content: space-evenly;
         align-items: center;
         height: 110px;
+        margin-top: 650px;
 
     h2{
         font-size: 2.2em;
@@ -48,12 +50,13 @@ const Div = styled.div`
 `
 
 const Line = styled.div`
+    margin-top: 20px;
     width: 80px;
     border: 2px solid #000000;
 `
 
 const Itens = styled.div`
-
+    margin-top: 80px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -70,6 +73,11 @@ const Itens = styled.div`
 
 `
 
+const Topico = styled.div`
+    width: 100%;
+    
+`
+
 export default function Main(){
     return(
         <Section>
@@ -82,6 +90,10 @@ export default function Main(){
                 <Pizza />
                 <Peanut />
             </Itens>
+            <Topico>
+                <About />
+            </Topico>
         </Section>
+
     )
 }
